@@ -1,30 +1,50 @@
-//palindrome
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include "utils.h"
+
 
 int main(){
 
-	//the biggest palindrome that can be formed with the multiplication of two three digit numbers
+	char number[100];
 
+
+	char a;
+	char b;
 	int i;
 	int j;
-	int high_score;
+	int theNum;
+	int product;
 
-	char reversed_string1;
-	char reversed_string2;
+	for(i=999;i>99;i--){
 
-	for(i=999;i>0;i--){
+		for(j=999;j>99;j--){
 
+			theNum = j*i;
 
-		for(j=999;j>0;j--){
+			snprintf(number, sizeof(number), "%i", theNum);
 
-		
+			if(isPalindrome(number) && theNum > product)
+				product = theNum;
 
 		}
+
 	}
-    
+
+	printf("%i",product);
+
+
+
+	
+	
+	//puts("Please enter a number: ");
+
+	//fgets(number, 100, stdin);
+
+	
+	
 
 }
+
