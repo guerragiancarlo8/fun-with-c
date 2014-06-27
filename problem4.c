@@ -10,9 +10,6 @@ int main(){
 
 	char number[100];
 
-
-	char a;
-	char b;
 	int i;
 	int j;
 	int theNum;
